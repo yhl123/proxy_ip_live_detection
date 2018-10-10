@@ -32,7 +32,6 @@ def get_proxy_ip(count=1):
 
 
 if __name__ == '__main__':
-    # 协程池
     start_time = time.time()
     for proxy_ip in get_proxy_ip(count=200):
         res = gevent.spawn(look_proxy_ip_live, proxy_ip)
